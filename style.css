@@ -151,50 +151,101 @@ a {
   align-items: center;
 }
 
-.brand-link {
+.header-left {
   display: flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.7rem;
+  flex-wrap: wrap;
 }
 
-/* Constrained Small Brand Logo */
-.brand-badge-icon {
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
-  min-height: 32px;
-  max-width: 32px;
-  max-height: 32px;
-  background: rgba(0, 240, 255, 0.1);
-  border: 1px solid rgba(0, 240, 255, 0.35);
-  border-radius: 8px;
+.coreveil-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.coreveil-logo-mark {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 0.75rem;
+  color: #060914;
+  background: linear-gradient(135deg, #00f0ff, #a855f7);
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
+  letter-spacing: -0.05em;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
 }
 
-.brand-svg {
-  width: 20px;
-  height: 20px;
-  max-width: 20px;
-  max-height: 20px;
+.coreveil-logo-mark.sm {
+  width: 22px;
+  height: 22px;
+  font-size: 0.68rem;
+  border-radius: 5px;
 }
 
-.brand-title {
+.coreveil-title {
   font-family: var(--font-heading);
   font-size: 1.15rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+.nav-divider-bar {
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.featured-product-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.22rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.76rem;
+  transition: all 0.2s ease;
+}
+
+.featured-product-badge:hover {
+  background: rgba(0, 240, 255, 0.12);
+  border-color: rgba(0, 240, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+.product-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 6px var(--accent-cyan);
+}
+
+.product-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.product-title {
+  font-weight: 700;
   color: #fff;
 }
 
 .badge-ai {
   background: linear-gradient(135deg, #00f0ff, #a855f7);
   color: #060914;
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 800;
-  padding: 0.15rem 0.4rem;
-  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
   vertical-align: middle;
   margin-left: 2px;
 }
@@ -713,9 +764,29 @@ a {
   margin-bottom: 1.25rem;
 }
 
-.footer-copy strong {
+.footer-org-header {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.footer-org-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
   color: #fff;
-  font-size: 0.9rem;
+}
+
+.footer-org-tag {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.12rem 0.5rem;
+  border-radius: 4px;
 }
 
 .footer-note {
@@ -798,6 +869,23 @@ a {
 @media (max-width: 768px) {
   .mobile-sticky-bar {
     display: flex;
+  }
+
+  .header-left {
+    gap: 0.4rem;
+  }
+
+  .coreveil-title {
+    font-size: 1rem;
+  }
+
+  .featured-product-badge {
+    padding: 0.18rem 0.5rem;
+    font-size: 0.72rem;
+  }
+
+  .product-label {
+    display: none;
   }
 
   .reasons-grid,
